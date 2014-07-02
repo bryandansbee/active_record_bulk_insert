@@ -1,3 +1,7 @@
+before_script:
+  - sudo add-apt-repository ppa:rethinkdb/ppa
+  - sudo apt-get update -q
+  - sudo apt-get install sqlite3 libsqlite3-dev
 language: ruby
 rvm:
   - "1.9.3"
