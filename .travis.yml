@@ -6,6 +6,7 @@ before_install:
   - make
   - sudo -n make install
   - bundle config build.sqlite3 --with-sqlite3-dir=`pwd`
+  - bundle
   
 language: ruby
 rvm:
