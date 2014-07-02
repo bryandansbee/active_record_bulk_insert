@@ -5,7 +5,7 @@ before_install:
   - ./configure
   - make
   - sudo -n make install
-  - find /usr -name "libsqlite3*" -type f 2> /dev/null
+  - find /usr -name 'libsqlite3*' -type f 2> /dev/null
   - sqlite3 --version
   
 language: ruby
