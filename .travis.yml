@@ -1,6 +1,7 @@
 before_install:
   - wget "http://www.sqlite.org/2014/sqlite-autoconf-3080500.tar.gz"
-  - cd sqlite*
+  - tar zxvf sqlite-autoconf-3080500.tar.gz
+  - cd sqlite-autoconf-3080500
   - ./configure
   - make
   - sudo -n make install
