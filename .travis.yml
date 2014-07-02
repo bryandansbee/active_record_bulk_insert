@@ -5,14 +5,8 @@ before_install:
   - ./configure
   - make
   - sudo -n make install
-  - sqlite3 --version
-  
-before_script:
-  - wget "http://www.sqlite.org/2014/sqlite-autoconf-3080500.tar.gz"
-  - cd sqlite*
-  - ./configure
-  - make
-  - sudo -n make install
+  - find /usr -name "libsqlite3" -type f &2> /dev/null
+  - sudo cp  /usr/local/lib/libsqlite3.so.0* /usr/lib/i386-linux-gnu/
   - sqlite3 --version
   
 language: ruby
